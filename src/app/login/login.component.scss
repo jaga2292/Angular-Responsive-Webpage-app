@@ -1,0 +1,40 @@
+/* login.component.css */
+
+.card-container {
+    // perspective: 1000px; /* Define the depth of the 3D space */
+    width: 300px;
+    margin: auto;
+  }
+  
+  .card {
+    width: 100%;
+    height: 300px;
+    transform-style: preserve-3d; /* Ensure child elements are also transformed in 3D space */
+    transform: rotateY(20deg); /* Adjust the rotation angle for your desired effect */
+    transition: transform 0.5s ease; /* Add a smooth transition effect */
+  }
+  
+  .card:hover {
+    transform: rotateY(0deg); /* Adjust the rotation angle for hover effect */
+  }
+  
+  .card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the back face of the card during rotation */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-front {
+    background-color: #fff; /* Front face color */
+  }
+  
+  .card-back {
+    transform: rotateY(180deg); /* Rotate the back face 180 degrees */
+    background-color: #f0f0f0; /* Back face color */
+  }
+  
+  /* Customize the styles based on your design */
+  
